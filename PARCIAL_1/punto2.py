@@ -1,6 +1,6 @@
 from super_heroe_class import *
 from super_heroes_data import superheroes
-from list_ import List
+from Tp4.Tp4.list_ import List
 from queue_ import Queue
 
 

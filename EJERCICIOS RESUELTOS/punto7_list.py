@@ -1,7 +1,7 @@
 #7. Implementar los algoritmos necesarios para resolver las siguientes tareas:
 
 
-from list_ import List
+from Tp4.Tp4.list_ import List
 from random import randint 
 
 list_a= List()

@@ -1,6 +1,6 @@
 "Diseñar un algoritmo que permita contar la cantidad de nodos de una lista."
 
-from list_ import List 
+from Tp4.Tp4.list_ import List 
 
 list_nodos = List ()
 nodos = [1, 22, 96, 85, 45, 78, 52]
