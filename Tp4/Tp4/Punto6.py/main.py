@@ -46,20 +46,17 @@ def countHouse(list, value):
   return cont
 
 # a. eliminar el nodo que contiene la información de Linterna Verde;
-
 element = superheroesList.delete_value('Linterna Verde', 'name')
 print(f"""Heroe eliminado:
 {element}
 """)
 
 # b. mostrar el año de aparición de Wolverine;
-
 index = superheroesList.search('Wolverine', 'name')
 print(f"""Año de aparición de Wolverine: {superheroesList[index].appearance}
 """)
 
 # c. cambiar la casa de Dr. Strange a Marvel;
-
 index = superheroesList.search('Dr. Strange', 'name')
 superheroesList[index].house = 'Marvel'
 print(f"""Casa de Dr. Strange cambiada:
@@ -67,7 +64,6 @@ print(f"""Casa de Dr. Strange cambiada:
 """)
 
 # d. mostrar el nombre de aquellos superhéroes que en su biografía menciona la palabra “traje” o “armadura”;
-
 print('Superheroes con "traje" en su biografia:')
 showByBiography(superheroesList, 'traje')
 print()
@@ -76,13 +72,11 @@ showByBiography(superheroesList, 'armadura')
 print()
 
 # e. mostrar el nombre y la casa de los superhéroes cuya fecha de aparición sea anterior a 1963;
-
 print('Heroes cuya fecha de aparición es anterior a 1963:')
 showByYear(superheroesList, 1963)
 print()
 
 # f. mostrar la casa a la que pertenece Capitana Marvel y Mujer Maravilla;
-
 temp = ['Capitana Marvel', 'Mujer Maravilla']
 for hero in temp:
   index = superheroesList.search(hero, 'name')
@@ -91,7 +85,6 @@ for hero in temp:
 print()
 
 # g. mostrar toda la información de Flash y Star-Lord;
-
 temp = ['Flash', 'Star-Lord']
 for hero in temp:
   index = superheroesList.search(hero, 'name')
@@ -100,11 +93,9 @@ for hero in temp:
   print()
 
 # h. listar los superhéroes que comienzan con la letra B, M y S;
-
 print('Heroes con iniciales B, M, S:')
 showByInitial(superheroesList, ['B', 'M', 'S'])
 
 # i. determinar cuántos superhéroes hay de cada casa de comic.
-
 print(f"""Heroes de marvel: {countHouse(superheroesList, 'Marvel')}
 Heroes de DC: {countHouse(superheroesList, 'DC')}""")
