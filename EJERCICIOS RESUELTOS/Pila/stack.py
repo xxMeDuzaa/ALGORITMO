@@ -1,6 +1,5 @@
 from typing import Any, Optional
 
-
 class Stack:
 
     def __init__(self):
@@ -12,8 +11,8 @@ class Stack:
 
     def pop(self) -> Optional[Any]:
         return (
-            self.__elements.pop()
-            if self.__elements
+            self.__elements.pop() 
+            if self.__elements #VERIFICA SI TIENE ELEMENTOS O NO
             else None
         )
 
@@ -22,7 +21,7 @@ class Stack:
 
     def on_top(self) -> Optional[Any]:
         return (
-            self.__elements[-1]
+            self.__elements[-1] #OBJETO QUE ESTA EN LA CIMA
             if self.__elements
             else None
         )
@@ -35,6 +34,4 @@ class Stack:
             aux_stack.push(value)
         
         while aux_stack.size() > 0:
-            self.push(aux_stack.pop())
-
-            
+            self.push(aux_stack.pop())           
