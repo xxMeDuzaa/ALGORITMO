@@ -2,7 +2,7 @@
 # criterio (1- empleados, 2- staff de tecnologías de la información “TI”, 3- gerente), y resuelva la
 # siguiente situación:
 
-from Tp3.heap import HeapMax
+from heap import HeapMax
 
 priority_queue = HeapMax()
 
