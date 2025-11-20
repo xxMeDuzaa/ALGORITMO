@@ -1,4 +1,4 @@
-from Tp4.Tp4.list_ import List
+from list_ import List
 from Jedi import *
 from jedis_data import jedisData
 

@@ -1,4 +1,4 @@
-from Tp4.Tp4.list_ import List
+from list_ import List
 class Jedi:
 
   def __init__(self, nombre: str, especie: str, maestros: List, color_sable: str):

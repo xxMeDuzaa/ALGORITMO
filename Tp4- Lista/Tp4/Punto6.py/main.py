@@ -1,5 +1,5 @@
 from superhero import *
-from Tp4.Tp4.list_ import List
+from list_ import List
 
 superheroesList = List()
 
