@@ -1,57 +1,40 @@
 from typing import Any, Optional
 
-
 class Stack:
 
-    def init(self):   
-        """
-        inicilizar las posiciones de la pila
-        """
-        self.elements = []   #array vacio
+    def __init__(self):
+        self.__elements = []
+        
+    def is_empty(self): #sirve para ver si la pila esta vacia
+        return len(self.items) == 0
 
 
-    def push(self, value: Any) -> None:    
-        """
-        agregar un elemento a la pila (top de la pila)
-        """
-        self.elements.append(value)        
+    def push(self, value: Any) -> None:
+        self.__elements.append(value)
 
-    def pop(self) -> Optional[Any]:      
-        """
-        elimina y retorna un elemento de la pila (top de la pila) 
-        """
+    def pop(self) -> Optional[Any]:
         return (
-            self.elements.pop()         
-            if self.elements
+            self.__elements.pop() 
+            if self.__elements #VERIFICA SI TIENE ELEMENTOS O NO
             else None
         )
 
-    def size(self) -> int:      
-        """
-        retorna el tamaño de la pila
-        """
-        return len(self.elements)
+    def size(self) -> int:
+        return len(self.__elements)
 
-    def on_top(self) -> Optional[Any]:    
-        """
-        retorna el elemento que está en el top de la pila sin eliminarlo
-        """
+    def on_top(self) -> Optional[Any]:
         return (
-            self.elements[-1]
+            self.__elements[-1] #OBJETO QUE ESTA EN LA CIMA
             if self.__elements
             else None
         )
 
-    def show(self): 
-        """
-        Muestra todos los elementos de la pila, desde la cima hasta la base,
-        sin alterar el contenido original de la misma.
-        """        
+    def show(self):
         aux_stack = Stack()
         while self.size() > 0:
             value = self.pop()
             print(value)
             aux_stack.push(value)
-
-        while aux_stack.size() > 0: 
+        
+        while aux_stack.size() > 0:
             self.push(aux_stack.pop())
