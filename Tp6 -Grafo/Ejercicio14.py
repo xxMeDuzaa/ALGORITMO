@@ -24,7 +24,7 @@ def crear_casa(g):
 
     ambientes = [
     "cocina", "comedor", "cochera", "quincho",
-    "baño 1", "baño 2", "habitación 1", "habitación 2",
+    "baño 1", "baño 2", "habitacion 1", "habitacion 2",
     "sala de estar", "terraza", "patio"
     ]
 
@@ -50,30 +50,30 @@ def crear_casa(g):
 
         ("cochera", "patio", 9),
         ("cochera", "baño 2", 14),
-        ("cochera", "habitación 2", 11),
+        ("cochera", "habitacion 2", 11),
 
         ("quincho", "terraza", 3),
         ("quincho", "patio", 7),
         ("quincho", "sala de estar", 10),
 
-        ("baño 1", "habitación 1", 4),
+        ("baño 1", "habitacion 1", 4),
         ("baño 1", "baño 2", 6),
         ("baño 1", "sala de estar", 8),
 
-        ("baño 2", "habitación 2", 5),
+        ("baño 2", "habitacion 2", 5),
         ("baño 2", "sala de estar", 9),
         ("baño 2", "terraza", 12),
 
-        ("habitación 1", "habitación 2", 7),
-        ("habitación 1", "sala de estar", 6),
-        ("habitación 1", "terraza", 10),
+        ("habitacion 1", "habitacion 2", 7),
+        ("habitacion 1", "sala de estar", 6),
+        ("habitacion 1", "terraza", 10),
 
-        ("habitación 2", "comedor", 5),
-        ("habitación 2", "patio", 8),
+        ("habitacion 2", "comedor", 5),
+        ("habitacion 2", "patio", 8),
         ("habitacion 2", "terraza", 4),
 
         ("sala de estar", "quincho", 5),
-        ("sala de estar", "habitación 2", 8),
+        ("sala de estar", "habitacion 2", 8),
         ("sala de estar", "baño 1", 11),
 
         ("terraza", "patio", 4),
@@ -115,7 +115,7 @@ def mst_metros(g, vertice):
 
 # ---D- camino más corto desde la habitación 1 hasta la sala de estar
 def camino_mas_corto(g):
-    inicio = "habitación 1"
+    inicio = "habitacion 1"
     destino = "sala de estar"
     
     path_stack = g.dijkstra(inicio) # Pila con (vértice, distancia, predecesor)
